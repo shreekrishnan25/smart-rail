@@ -1,0 +1,47 @@
+[
+    {
+        "number": "12675",
+        "name": "Kovai Express",
+        "from": "Coimbatore",
+        "to": "Chennai",
+        "departure": "06:10 AM",
+        "arrival": "01:50 PM",
+        "delay": 12
+    },
+    {
+        "number": "12674",
+        "name": "Chennai Express",
+        "from": "Chennai",
+        "to": "Coimbatore",
+        "departure": "06:00 AM",
+        "arrival": "01:45 PM",
+        "delay": 5
+    },
+    {
+        "number": "16842",
+        "name": "Intercity Express",
+        "from": "Coimbatore",
+        "to": "Chennai",
+        "departure": "07:30 AM",
+        "arrival": "03:15 PM",
+        "delay": 0
+    },
+    {
+        "number": "12084",
+        "name": "Coimbatore Intercity",
+        "from": "Coimbatore",
+        "to": "Salem",
+        "departure": "08:00 AM",
+        "arrival": "10:30 AM",
+        "delay": 3
+    },
+    {
+        "number": "12678",
+        "name": "Chennai Superfast",
+        "from": "Chennai",
+        "to": "Salem",
+        "departure": "09:00 AM",
+        "arrival": "02:30 PM",
+        "delay": 8
+    }
+]

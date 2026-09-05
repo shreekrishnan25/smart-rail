@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SmartTrain | AI Train ETA</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            🚆 <span>SmartTrain</span>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#search">Search Train</a>
+            <a href="#tracking">Tracking</a>
+            <a href="#weather">Weather</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <button class="nav-btn" onclick="goToSearch()">
+            Find Train
+        </button>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <span class="live-tag">
+                ● LIVE RAILWAY INTELLIGENCE
+            </span>
+
+            <h1>
+                Smart Train Tracking &
+                <span>Dynamic ETA</span>
+            </h1>
+
+            <p>
+                Track trains, predict arrival times and
+                monitor weather conditions with SmartTrain.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button class="primary" onclick="goToSearch()">
+                    🔎 Search Train
+                </button>
+
+                <button class="secondary" onclick="goToTracking()">
+                    🚆 Live Tracking
+                </button>
+
+            </div>
+
+            <div class="stats">
+
+                <div>
+                    <h3>98.2%</h3>
+                    <p>ETA Accuracy</p>
+                </div>
+
+                <div>
+                    <h3>142+</h3>
+                    <p>Active Trains</p>
+                </div>
+
+                <div>
+                    <h3>42ms</h3>
+                    <p>Response Time</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- LIVE TRAIN CARD -->
+
+        <div class="train-card">
+
+            <div class="card-header">
+
+                <span>LIVE TRAIN</span>
+
+                <span class="running">
+                    ● RUNNING
+                </span>
+
+            </div>
+
+            <div class="route">
+
+                <strong>Coimbatore</strong>
+
+                <span>→</span>
+
+                <strong>Chennai</strong>
+
+            </div>
+
+            <div class="track">
+
+                <div class="track-line"></div>
+
+                <div id="heroTrain" class="train-icon">
+                    🚆
+                </div>
+
+            </div>
+
+            <div class="eta">
+
+                <small>EXPECTED ARRIVAL</small>
+
+                <h2 id="heroEta">
+                    06:30 AM
+                </h2>
+
+                <span id="heroDelay">
+                    +12 min delay
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SEARCH ================= -->
+
+    <section id="search" class="section">
+
+        <div class="section-heading">
+
+            <span>01</span>
+
+            <div>
+                <h2>Search Your Train</h2>
+
+                <p>
+                    Search trains between major stations.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="search-box">
+
+            <div class="input-group">
+
+                <label>FROM</label>
+
+                <select id="from">
+
+                    <option value="Coimbatore">
+                        Coimbatore
+                    </option>
+
+                    <option value="Chennai">
+                        Chennai
+                    </option>
+
+                    <option value="Erode">
+                        Erode
+                    </option>
+
+                    <option value="Salem">
+                        Salem
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <button id="swap" class="swap">
+                ⇄
+            </button>
+
+
+            <div class="input-group">
+
+                <label>TO</label>
+
+                <select id="to">
+
+                    <option value="Chennai">
+                        Chennai
+                    </option>
+
+                    <option value="Coimbatore">
+                        Coimbatore
+                    </option>
+
+                    <option value="Erode">
+                        Erode
+                    </option>
+
+                    <option value="Salem">
+                        Salem
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <button id="searchBtn" class="primary">
+                Search Trains
+            </button>
+
+        </div>
+
+
+        <!-- RESULTS -->
+
+        <div id="results"></div>
+
+    </section>
+
+
+    <!-- ================= TRACKING ================= -->
+
+    <section id="tracking" class="section tracking-section">
+
+        <div class="section-heading">
+
+            <span>02</span>
+
+            <div>
+
+                <h2>Live Train Movement</h2>
+
+                <p>
+                    Watch the train move along the route.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="tracking-card">
+
+            <div class="tracking-header">
+
+                <div>
+
+                    <h3 id="trackTrain">
+                        Select a train
+                    </h3>
+
+                    <p id="trackRoute">
+                        Search and select a train to track
+                    </p>
+
+                </div>
+
+                <span class="running">
+                    ● RUNNING
+                </span>
+
+            </div>
+
+
+            <div class="route-map">
+
+                <div class="rail-line"></div>
+
+                <div id="movingTrain" class="moving-train">
+                    🚆
+                </div>
+
+
+                <div class="stations">
+
+                    <div>
+                        <span class="station active"></span>
+                        <b>Coimbatore</b>
+                        <small>Start</small>
+                    </div>
+
+                    <div>
+                        <span class="station"></span>
+                        <b>Erode</b>
+                        <small>Next Stop</small>
+                    </div>
+
+                    <div>
+                        <span class="station"></span>
+                        <b>Salem</b>
+                        <small>Next</small>
+                    </div>
+
+                    <div>
+                        <span class="station"></span>
+                        <b>Chennai</b>
+                        <small>Destination</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="tracking-info">
+
+                <div>
+                    <small>Speed</small>
+                    <strong id="speed">78 km/h</strong>
+                </div>
+
+                <div>
+                    <small>Distance Left</small>
+                    <strong id="distance">312 km</strong>
+                </div>
+
+                <div>
+                    <small>ETA</small>
+                    <strong id="eta">06:30 AM</strong>
+                </div>
+
+                <div>
+                    <small>Delay</small>
+                    <strong id="delay">+12 min</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= WEATHER ================= -->
+
+    <section id="weather" class="section">
+
+        <div class="section-heading">
+
+            <span>03</span>
+
+            <div>
+
+                <h2>Route Weather</h2>
+
+                <p>
+                    Weather conditions along the train route.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div id="weatherGrid" class="weather-grid"></div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about" class="about">
+
+        <div>
+
+            <span class="live-tag">
+                SMART RAILWAY TECHNOLOGY
+            </span>
+
+            <h2>
+                Built for a smarter journey.
+            </h2>
+
+            <p>
+                SmartTrain combines train movement,
+                ETA prediction and weather monitoring
+                to provide a smarter railway experience.
+            </p>
+
+        </div>
+
+
+        <div class="features">
+
+            <div>
+                🤖
+                <h3>AI ETA</h3>
+                <p>Dynamic arrival prediction</p>
+            </div>
+
+            <div>
+                📍
+                <h3>Live Tracking</h3>
+                <p>Visual train movement</p>
+            </div>
+
+            <div>
+                🌦️
+                <h3>Weather</h3>
+                <p>Route weather monitoring</p>
+            </div>
+
+            <div>
+                🔔
+                <h3>Alerts</h3>
+                <p>Train delay notifications</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <strong>
+            🚆 SmartTrain
+        </strong>
+
+        <span>
+            AI-Powered Dynamic Train ETA & Tracking
+        </span>
+
+        <span>
+            © 2026 SmartTrain
+        </span>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

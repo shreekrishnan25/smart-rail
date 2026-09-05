@@ -1,0 +1,632 @@
+/* ================================
+   SMARTTRAIN CSS
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f6f8fc;
+    color: #172033;
+    line-height: 1.6;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    height: 75px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    border-bottom: 1px solid #e7eaf0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: #596273;
+    font-weight: 600;
+}
+
+.navbar nav a:hover {
+    color: #1769e0;
+}
+
+.nav-btn,
+.primary {
+    border: none;
+    background: #1769e0;
+    color: white;
+    padding: 13px 22px;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.nav-btn:hover,
+.primary:hover {
+    background: #0e55bb;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 650px;
+    padding: 90px 7%;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 70px;
+    align-items: center;
+    background: linear-gradient(135deg, #f7faff, #eef4ff);
+}
+
+.live-tag {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #1769e0;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 5vw, 68px);
+    line-height: 1.05;
+    max-width: 700px;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #1769e0;
+}
+
+.hero-content > p {
+    max-width: 620px;
+    color: #687386;
+    font-size: 18px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.secondary {
+    padding: 13px 22px;
+    border-radius: 10px;
+    border: 1px solid #d8dee9;
+    background: white;
+    color: #172033;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.secondary:hover {
+    background: #f0f4fa;
+}
+
+
+/* ================= STATS ================= */
+
+.stats {
+    display: flex;
+    gap: 55px;
+    margin-top: 55px;
+}
+
+.stats h3 {
+    font-size: 25px;
+}
+
+.stats p {
+    color: #778195;
+    font-size: 13px;
+}
+
+
+/* ================= TRAIN CARD ================= */
+
+.train-card {
+    background: white;
+    padding: 30px;
+    border-radius: 22px;
+    box-shadow: 0 20px 60px rgba(30, 50, 90, 0.12);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 800;
+    color: #697488;
+}
+
+.running {
+    color: #168a55;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.route {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 45px 0 30px;
+    font-size: 20px;
+}
+
+.track {
+    height: 70px;
+    position: relative;
+}
+
+.track-line {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #dce4f0;
+    border-radius: 10px;
+}
+
+.train-icon {
+    position: absolute;
+    top: 12px;
+    left: 45%;
+    font-size: 35px;
+    transition: left 1s linear;
+}
+
+.eta {
+    margin-top: 25px;
+}
+
+.eta small {
+    color: #7a8495;
+}
+
+.eta h2 {
+    font-size: 38px;
+    margin: 5px 0;
+}
+
+.eta span {
+    color: #d97900;
+    font-weight: 700;
+}
+
+
+/* ================= SECTIONS ================= */
+
+.section {
+    padding: 100px 7%;
+}
+
+.section-heading {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 45px;
+}
+
+.section-heading > span {
+    font-size: 14px;
+    color: #1769e0;
+    font-weight: 800;
+}
+
+.section-heading h2 {
+    font-size: 38px;
+}
+
+.section-heading p {
+    color: #7a8495;
+    margin-top: 8px;
+}
+
+
+/* ================= SEARCH ================= */
+
+.search-box {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    display: grid;
+    grid-template-columns: 1fr 50px 1fr auto;
+    gap: 15px;
+    align-items: end;
+    box-shadow: 0 10px 40px rgba(30, 50, 90, 0.07);
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-group label {
+    font-size: 12px;
+    font-weight: 800;
+    color: #788296;
+}
+
+.input-group select {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #d9dfeb;
+    border-radius: 10px;
+    background: white;
+    font-size: 15px;
+    color: #172033;
+    cursor: pointer;
+}
+
+.swap {
+    height: 50px;
+    border: none;
+    background: #edf3fc;
+    border-radius: 10px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+
+/* ================= RESULTS ================= */
+
+#results {
+    margin-top: 25px;
+}
+
+.train-result {
+    background: white;
+    border: 1px solid #e5e9f0;
+    border-radius: 15px;
+    padding: 22px;
+    margin-bottom: 15px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr auto;
+    align-items: center;
+    gap: 20px;
+}
+
+.train-result small {
+    display: block;
+    color: #7c8798;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.train-result b {
+    display: block;
+}
+
+.train-result span {
+    display: block;
+    color: #737e91;
+    font-size: 13px;
+}
+
+.delay {
+    color: #d97900 !important;
+    font-weight: 700;
+}
+
+
+/* ================= TRACKING ================= */
+
+.tracking-section {
+    background: #f0f4fa;
+}
+
+.tracking-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 40px rgba(30, 50, 90, 0.07);
+}
+
+.tracking-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.tracking-header h3 {
+    font-size: 22px;
+}
+
+.tracking-header p {
+    color: #7b8494;
+}
+
+.route-map {
+    position: relative;
+    margin: 80px 0 55px;
+    height: 80px;
+}
+
+.rail-line {
+    position: absolute;
+    top: 30px;
+    left: 4%;
+    right: 4%;
+    height: 5px;
+    background: #dce3ee;
+}
+
+.moving-train {
+    position: absolute;
+    top: 5px;
+    left: 45%;
+    font-size: 30px;
+    transition: left 1s linear;
+    z-index: 3;
+}
+
+.stations {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.stations > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.station {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: white;
+    border: 5px solid #aeb9ca;
+}
+
+.station.active {
+    border-color: #1769e0;
+}
+
+.stations b {
+    font-size: 13px;
+}
+
+.stations small {
+    color: #7c8798;
+    font-size: 11px;
+}
+
+.tracking-info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid #e7ebf1;
+    padding-top: 25px;
+}
+
+.tracking-info div {
+    padding-left: 20px;
+    border-right: 1px solid #e7ebf1;
+}
+
+.tracking-info div:last-child {
+    border-right: none;
+}
+
+.tracking-info small {
+    display: block;
+    color: #7b8494;
+}
+
+.tracking-info strong {
+    font-size: 20px;
+}
+
+
+/* ================= WEATHER ================= */
+
+.weather-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.weather-card {
+    background: white;
+    padding: 25px;
+    border-radius: 17px;
+    border: 1px solid #e7ebf1;
+}
+
+.weather-icon {
+    font-size: 35px;
+}
+
+.weather-card h3 {
+    margin-top: 15px;
+}
+
+.weather-card p {
+    color: #7c8798;
+}
+
+.weather-card strong {
+    display: block;
+    font-size: 27px;
+    margin: 10px 0;
+}
+
+.weather-card small {
+    color: #1769e0;
+    font-weight: 700;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about {
+    padding: 100px 7%;
+    background: #101827;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+}
+
+.about h2 {
+    font-size: 45px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.about p {
+    color: #aab4c5;
+    max-width: 600px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.features > div {
+    padding: 25px;
+    border: 1px solid #273247;
+    border-radius: 15px;
+}
+
+.features h3 {
+    margin-top: 10px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    padding: 30px 7%;
+    background: #0b111c;
+    color: #aab4c5;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .navbar nav {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 60px;
+    }
+
+    .search-box {
+        grid-template-columns: 1fr;
+    }
+
+    .swap {
+        width: 100%;
+    }
+
+    .train-result {
+        grid-template-columns: 1fr;
+    }
+
+    .weather-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .hero,
+    .section,
+    .about {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .stats {
+        gap: 25px;
+    }
+
+    .stats h3 {
+        font-size: 20px;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .weather-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tracking-info {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .tracking-info div {
+        border-right: none;
+    }
+
+    .stations b {
+        font-size: 10px;
+    }
+
+    .stations small {
+        font-size: 9px;
+    }
+}
