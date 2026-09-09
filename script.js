@@ -108,7 +108,15 @@ const trains = [
         arrival: "01:30 PM",
         delay: 4
     }
-
+{
+    number: "66621",
+    name: "Salem - Erode MEMU",
+    from: "Salem",
+    to: "Erode",
+    departure: "06:15 AM",
+    arrival: "07:25 AM",
+    delay: 0
+},
 ];
 
 

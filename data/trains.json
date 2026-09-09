@@ -6,7 +6,8 @@
         "to": "Chennai",
         "departure": "06:10 AM",
         "arrival": "01:50 PM",
-        "delay": 12
+        "delay": 15
+    
     },
     {
         "number": "12674",
@@ -15,7 +16,7 @@
         "to": "Coimbatore",
         "departure": "06:00 AM",
         "arrival": "01:45 PM",
-        "delay": 5
+        "delay": 
     },
     {
         "number": "16842",
@@ -23,7 +24,7 @@
         "from": "Coimbatore",
         "to": "Chennai",
         "departure": "07:30 AM",
-        "arrival": "03:15 PM",
+        "arrival": "03:15 PM"
         "delay": 0
     },
     {
@@ -36,6 +37,7 @@
         "delay": 3
     },
     {
+    
         "number": "12678",
         "name": "Chennai Superfast",
         "from": "Chennai",
@@ -43,5 +45,13 @@
         "departure": "09:00 AM",
         "arrival": "02:30 PM",
         "delay": 8
-    }
-]
+}
+        {
+    number: "66621",
+    name: "Salem - Erode MEMU",
+    from: "Salem",
+    to: "Erode",
+    departure: "06:15 AM",
+    arrival: "07:25 AM",
+    delay: 0
+},
